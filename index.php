@@ -32,10 +32,10 @@
         <div class="collapse navbar-collapse" id="menu">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Admissions</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Academics</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="admissions.php">Admissions</a></li>
+                <li class="nav-item"><a class="nav-link" href="academics.php">Academics</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
             
                  <!-- E-PORTAL BUTTON -->
     <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
