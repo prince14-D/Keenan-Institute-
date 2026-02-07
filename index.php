@@ -65,7 +65,7 @@
       <!-- SLIDE 1 -->
       <div class="carousel-item active hero-slide" style="background: url('assets/images/banner.jpeg') center/cover no-repeat fixed;">
         <div class="container">
-          <h1>Keenan Institute</h1>
+          <h1>Keenan Institute School</h1>
           <p>“Those Who Don't Know Can Know From Learning”</p>
           <a href="#" class="btn btn-keenan mt-4">Explore Our School</a>
         </div>
