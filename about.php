@@ -196,6 +196,61 @@
 </section>
 
 
+<!-- OUR TEAM -->
+<section class="team-section py-5">
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <h2 class="section-title">Our Leadership & Team</h2>
+      <p class="text-muted">
+        Dedicated educators and administrators committed to excellence in learning.
+      </p>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+
+      <!-- Team Member 1 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="team-card text-center">
+          <img src="assets/images/team1.jpg" alt="Principal" class="team-img">
+          <h5>Rev. Fr. Prince T. Wreh, Sr.</h5>
+          <p class="team-role">Founder / Principal</p>
+        </div>
+      </div>
+
+      <!-- Team Member 2 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="team-card text-center">
+          <img src="assets/images/team2.jpg" alt="Vice Principal">
+          <h5>Relhetta J. Wreh</h5>
+          <p class="team-role">Administrator</p>
+        </div>
+      </div>
+
+      <!-- Team Member 3 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="team-card text-center">
+          <img src="assets/images/team3.jpg" alt="Academic Head">
+          <h5>Academic Coordinator</h5>
+          <p class="team-role">Head of Academics</p>
+        </div>
+      </div>
+
+      <!-- Team Member 4 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="team-card text-center">
+          <img src="assets/images/team4.jpg" alt="Senior Teacher">
+          <h5>Senior Teacher</h5>
+          <p class="team-role">Faculty Member</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
 <!-- FULL FOOTER -->
 <footer class="footer-section pt-5">
   <div class="container">
