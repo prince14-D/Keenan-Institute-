@@ -452,7 +452,7 @@
         </p>
         <p class="footer-text">
           📞 +231 880 369 397<br>
-          ✉️ info@keenaninstitute.edu.lr
+          ✉️ info@keenaninstitute.com
         </p>
 
         <!-- Social Media -->
