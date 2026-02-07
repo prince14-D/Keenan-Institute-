@@ -126,7 +126,7 @@ body {
     position: relative;
     background-size: cover !important;
     background-position: center !important;
-    background-attachment: fixed;
+    background-attachment: scroll !important;
 }
 
 .hero-slide .container {
@@ -223,6 +223,95 @@ body {
 .hero-slide .btn-keenan:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(193, 18, 31, 0.5);
+}
+
+/* Responsive adjustments for the hero slider */
+@media (max-width: 992px) {
+    .hero-slider {
+        height: auto;
+        min-height: 55vh;
+    }
+
+    #keenanHeroCarousel,
+    .carousel-inner {
+        height: auto;
+    }
+
+    .hero-slide {
+        padding: 60px 16px;
+        align-items: flex-end;
+        background-attachment: scroll !important;
+    }
+
+    .hero-slide .container {
+        z-index: 2;
+        position: relative;
+        text-align: left;
+        padding-bottom: 30px;
+    }
+
+    .hero-slide h1 {
+        font-size: clamp(1.6rem, 6vw, 2.4rem);
+        line-height: 1.05;
+    }
+
+    .hero-slide p {
+        font-size: clamp(0.95rem, 3.6vw, 1.1rem);
+    }
+
+    .hero-slide .btn-keenan {
+        padding: 10px 18px;
+        font-size: 0.95rem;
+        width: auto;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 40px;
+        height: 40px;
+        left: 8px;
+        right: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 0.9;
+    }
+
+    .carousel-control-prev {
+        left: 8px;
+    }
+
+    .carousel-control-next {
+        right: 8px;
+    }
+
+    .carousel-indicators {
+        bottom: 12px !important;
+        gap: 8px;
+    }
+
+    .carousel-indicators [data-bs-target] {
+        width: 10px;
+        height: 10px;
+    }
+
+    .carousel-indicators [data-bs-target].active {
+        width: 22px;
+    }
+
+    .hero-slide::before {
+        background: linear-gradient(
+            135deg,
+            rgba(193, 18, 31, 0.55),
+            rgba(0, 48, 73, 0.9)
+        );
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-slide .container { padding-bottom: 20px; }
+    .hero-slide h1 { font-size: clamp(1.4rem, 7.5vw, 1.9rem); }
+    .hero-slide p { font-size: 0.95rem; }
+    .hero-slide { padding: 48px 12px; }
 }
 
 /* CAROUSEL CONTROLS */
