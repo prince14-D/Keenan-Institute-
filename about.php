@@ -126,6 +126,52 @@
 
         </div>
 
+        <!-- PRINCIPAL MESSAGE -->
+<section class="principal-section py-5">
+  <div class="container">
+    <div class="row align-items-center g-4">
+
+      <!-- Principal Image -->
+      <div class="col-md-4 text-center">
+        <img src="assets/images/Principal.jpeg"
+             alt="Principal of Keenan Institute"
+             class="img-fluid principal-img shadow">
+      </div>
+
+      <!-- Message -->
+      <div class="col-md-8">
+        <h2 class="section-title mb-3">Message from the Principal</h2>
+
+        <p>
+          Welcome to <strong>Keenan Institute</strong>, a place where learning,
+          character, and opportunity come together. Since our establishment,
+          we have remained committed to providing quality education that empowers
+          students academically, morally, and socially.
+        </p>
+
+        <p>
+          At Keenan Institute, we believe that every child deserves access to
+          education regardless of background or circumstance. Our dedicated
+          staff works tirelessly to nurture talent, instill discipline, and
+          prepare our students to become responsible and productive citizens.
+        </p>
+
+        <p>
+          We invite parents, partners, and the community to join us as we continue
+          building a brighter future through learning.
+        </p>
+
+        <h6 class="mt-4 fw-bold text-keenan-red">
+          Rev. Fr. Prince T. Wreh, Sr.
+        </h6>
+        <small class="text-muted">Founder / Principal</small>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
         <!-- COMMITMENT -->
         <div class="row">
             <div class="col-lg-10 mx-auto">
