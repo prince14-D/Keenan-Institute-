@@ -303,8 +303,8 @@
           Bong County, Liberia
         </p>
         <p class="footer-text">
-          📞 +231 XXX XXX XXX<br>
-          ✉️ info@keenaninstitute.edu.lr
+          📞 +231 880 427 277<br>
+          ✉️ info@keenaninstitute.com
         </p>
 
         <!-- Social Media -->
