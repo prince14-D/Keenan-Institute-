@@ -617,3 +617,255 @@ body {
     color: var(--keenan-blue);
     font-weight: 700;
 }
+
+:root {
+    --keenan-red: #c1121f;
+    --keenan-blue: #003049;
+    --keenan-gold: #fcbf49;
+    --keenan-white: #ffffff;
+}
+
+/* GENERAL */
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* NAVBAR */
+.keenan-navbar {
+    background-color: var(--keenan-red);
+}
+
+.keenan-navbar .navbar-brand,
+.keenan-navbar .nav-link {
+    color: var(--keenan-white) !important;
+    font-weight: 600;
+}
+
+.keenan-navbar .nav-link.active,
+.keenan-navbar .nav-link:hover {
+    color: var(--keenan-gold) !important;
+}
+
+/* E-PORTAL BUTTON */
+.btn-portal {
+    background-color: var(--keenan-gold);
+    color: var(--keenan-blue);
+    font-weight: 700;
+    padding: 8px 18px;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+.btn-portal:hover {
+    background-color: var(--keenan-white);
+    color: var(--keenan-red);
+}
+
+/* PAGE HERO */
+.page-hero {
+    background: linear-gradient(rgba(0,48,73,0.9), rgba(0,48,73,0.9)),
+        url('../images/banner2.jpeg') center/cover no-repeat;
+    padding: 90px 0;
+    color: var(--keenan-white);
+}
+
+.page-hero h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+}
+
+/* ADMISSION FORM */
+.admission-form-card {
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    background: #ffffff;
+}
+
+.form-title {
+    font-weight: 800;
+    color: var(--keenan-blue);
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--keenan-blue);
+}
+
+.required {
+    color: var(--keenan-red);
+}
+
+/* INPUTS */
+.form-control,
+.form-select {
+    border-radius: 10px;
+    padding: 12px 14px;
+    border: 1.5px solid #dee2e6;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--keenan-red);
+    box-shadow: 0 0 0 0.15rem rgba(193,18,31,0.25);
+}
+
+/* BUTTON */
+.btn-keenan {
+    background-color: var(--keenan-gold);
+    color: var(--keenan-blue);
+    font-weight: 700;
+    border-radius: 30px;
+}
+
+.btn-keenan:hover {
+    background-color: var(--keenan-red);
+    color: var(--keenan-white);
+}
+
+/* FOOTER */
+.footer-section {
+    background-color: var(--keenan-blue);
+    color: var(--keenan-white);
+}
+
+/* =========================
+   ACADEMICS PAGE STYLES
+========================= */
+
+/* Academic overview text */
+.academic-overview p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+/* PROGRAM CARDS */
+.program-card {
+    border: none;
+    border-top: 6px solid var(--keenan-red);
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff;
+}
+
+.program-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+}
+
+.program-card h5 {
+    font-weight: 700;
+    color: var(--keenan-blue);
+    margin-bottom: 12px;
+}
+
+.program-card p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* SUBJECTS OFFERED */
+.subject-box {
+    background-color: #ffffff;
+    padding: 18px 10px;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--keenan-blue);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.subject-box:hover {
+    background-color: var(--keenan-gold);
+    color: var(--keenan-blue);
+    transform: translateY(-6px);
+}
+
+/* TEACHING APPROACH LIST */
+.teaching-approach ul {
+    padding-left: 20px;
+}
+
+.teaching-approach li {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+/* CTA SECTION (Reuse if not already styled) */
+.admissions-cta {
+    background: linear-gradient(
+        rgba(193,18,31,0.95),
+        rgba(193,18,31,0.95)
+    ),
+    url('../images/banner3.jpeg') center/cover no-repeat;
+    color: var(--keenan-white);
+}
+
+.admissions-cta .cta-title {
+    font-size: 2.4rem;
+    font-weight: 800;
+}
+
+.admissions-cta .cta-text {
+    font-size: 1.05rem;
+    opacity: 0.95;
+}
+
+/* MOBILE OPTIMIZATION */
+@media (max-width: 768px) {
+    .admissions-cta .cta-title {
+        font-size: 2rem;
+    }
+
+    .program-card {
+        margin-bottom: 15px;
+    }
+}
+
+/* =========================
+   CONTACT PAGE STYLES
+========================= */
+
+.contact-info-card {
+    background-color: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.contact-info-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.contact-info-list li {
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+/* CONTACT FORM */
+.contact-form-card {
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.map-card {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .contact-info-card {
+        margin-bottom: 20px;
+    }
+}

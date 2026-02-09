@@ -31,7 +31,7 @@
 
         <div class="collapse navbar-collapse" id="menu">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="index.php">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="admissions.php">Admissions</a></li>
                 <li class="nav-item"><a class="nav-link" href="academics.php">Academics</a></li>
@@ -39,7 +39,7 @@
             
                  <!-- E-PORTAL BUTTON -->
     <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-        <a class="btn btn-portal" href="portal/" target="_blank">
+        <a class="btn btn-portal" href="https://portal.keenaninstitute.com" target="_blank">
             E-Portal
         </a>
     </li>
@@ -451,7 +451,7 @@
           Bong County, Liberia
         </p>
         <p class="footer-text">
-          📞 +231 880 369 397<br>
+          📞 +231 880 427 277<br>
           ✉️ info@keenaninstitute.com
         </p>
 
