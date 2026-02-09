@@ -457,9 +457,9 @@
 
         <!-- Social Media -->
         <div class="footer-socials mt-3">
-          <a href="#" aria-label="Facebook">🌐</a>
-          <a href="#" aria-label="WhatsApp">💬</a>
-          <a href="#" aria-label="Email">✉️</a>
+          <a href="https://www.facebook.com/KeenanInstitute" aria-label="Facebook">🌐</a>
+          <a href="https://wa.me/231880427277" aria-label="WhatsApp">💬</a>
+          <a href="mailto:info@keenaninstitute.com" aria-label="Email">✉️</a>
         </div>
       </div>
 
