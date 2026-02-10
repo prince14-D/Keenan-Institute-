@@ -448,11 +448,11 @@
         <p class="footer-text">
           📍 Goll Farm Community,<br>
           Jorquelliah District,<br>
-          Bong County, 
+          Bong County, Liberia
         </p>
         <p class="footer-text">
           📞 +231 880 427 277<br>
-          ✉️ info@keenaninstitute.comwww
+          ✉️ info@keenaninstitute.com
         </p>
 
         <!-- Social Media -->
