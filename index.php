@@ -31,7 +31,7 @@
 
         <div class="collapse navbar-collapse" id="menu">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="index.php">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="admissions.php">Admissions</a></li>
                 <li class="nav-item"><a class="nav-link" href="academics.php">Academics</a></li>
@@ -39,7 +39,7 @@
             
                  <!-- E-PORTAL BUTTON -->
     <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-        <a class="btn btn-portal" href="portal/" target="_blank">
+        <a class="btn btn-portal" href="https://portal.keenaninstitute.com" target="_blank">
             E-Portal
         </a>
     </li>
@@ -65,7 +65,7 @@
       <!-- SLIDE 1 -->
       <div class="carousel-item active hero-slide" style="background: url('assets/images/banner.jpeg') center/cover no-repeat fixed;">
         <div class="container">
-          <h1>Keenan Institute School</h1>
+          <h1>Keenan Institute </h1>
           <p>“Those Who Don't Know Can Know From Learning”</p>
           <a href="#" class="btn btn-keenan mt-4">Explore Our School</a>
         </div>
@@ -451,15 +451,15 @@
           Bong County, Liberia
         </p>
         <p class="footer-text">
-          📞 +231 880 369 397<br>
+          📞 +231 880 427 277<br>
           ✉️ info@keenaninstitute.com
         </p>
 
         <!-- Social Media -->
         <div class="footer-socials mt-3">
-          <a href="#" aria-label="Facebook">🌐</a>
-          <a href="#" aria-label="WhatsApp">💬</a>
-          <a href="#" aria-label="Email">✉️</a>
+          <a href="https://www.facebook.com/KeenanInstitute" aria-label="Facebook">🌐</a>
+          <a href="https://wa.me/231880427277" aria-label="WhatsApp">💬</a>
+          <a href="mailto:info@keenaninstitute.com" aria-label="Email">✉️</a>
         </div>
       </div>
 
