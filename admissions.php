@@ -223,42 +223,46 @@ document.getElementById("admissionForm").addEventListener("submit", e => {
     const message = document.getElementById("formMessage");
 
     message.innerHTML = `
-        <div class="alert alert-info">
-            Submitting your admission, please wait...
-        </div>
+      <div class="alert alert-info">
+        Submitting, please wait...
+      </div>
     `;
 
     fetch(scriptURL, {
         method: "POST",
         body: new FormData(form)
     })
-    .then(() => {
-        message.innerHTML = `
-            <div class="alert alert-success">
+    .then(res => res.json())   // 🔴 THIS WAS MISSING BEFORE
+    .then(data => {
+        if (data.status === "success") {
+            message.innerHTML = `
+              <div class="alert alert-success">
                 <strong>Registration Successful!</strong><br>
-                Your admission information has been received.<br>
-                Kindly visit the Registrar’s Office to complete the registration.<br><br>
-                <em>You will be redirected to the home page shortly...</em>
-            </div>
-        `;
+                Kindly visit the Registrar’s Office to complete registration.<br><br>
+                Redirecting to home page...
+              </div>
+            `;
 
-        form.reset();
+            form.reset();
 
-        // ⏳ Redirect after 3 seconds
-        setTimeout(() => {
-            window.location.href = "index.php";
-        }, 3000);
+            setTimeout(() => {
+                window.location.href = "index.php";
+            }, 3000);
+
+        } else {
+            throw new Error(data.message);
+        }
     })
-    .catch(() => {
+    .catch(err => {
         message.innerHTML = `
-            <div class="alert alert-danger">
-                Submission failed. Please try again.
-            </div>
+          <div class="alert alert-danger">
+            Submission failed. Please try again.
+          </div>
         `;
+        console.error(err);
     });
 });
 </script>
-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
