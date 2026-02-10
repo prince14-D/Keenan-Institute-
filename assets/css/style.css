@@ -228,19 +228,22 @@ body {
 /* Responsive adjustments for the hero slider */
 @media (max-width: 992px) {
     .hero-slider {
-        height: auto;
-        min-height: 55vh;
+        min-height: 50vh;
     }
 
     #keenanHeroCarousel,
     .carousel-inner {
-        height: auto;
+        min-height: 50vh;
     }
 
     .hero-slide {
-        padding: 60px 16px;
-        align-items: flex-end;
+        min-height: 50vh;
+        padding: 40px 16px;
+        align-items: center;
+        justify-content: center;
         background-attachment: scroll !important;
+        background-size: cover !important;
+        background-position: center !important;
     }
 
     .hero-slide .container {
@@ -308,10 +311,32 @@ body {
 }
 
 @media (max-width: 480px) {
-    .hero-slide .container { padding-bottom: 20px; }
-    .hero-slide h1 { font-size: clamp(1.4rem, 7.5vw, 1.9rem); }
-    .hero-slide p { font-size: 0.95rem; }
-    .hero-slide { padding: 48px 12px; }
+    .hero-slider {
+        min-height: 40vh;
+    }
+
+    #keenanHeroCarousel,
+    .carousel-inner,
+    .hero-slide {
+        min-height: 40vh;
+    }
+
+    .hero-slide .container {
+        padding: 0;
+    }
+
+    .hero-slide h1 {
+        font-size: clamp(1.3rem, 7vw, 1.8rem);
+    }
+
+    .hero-slide p {
+        font-size: 0.9rem;
+    }
+
+    .hero-slide .btn-keenan {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
 }
 
 /* CAROUSEL CONTROLS */

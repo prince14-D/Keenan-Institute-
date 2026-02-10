@@ -63,7 +63,7 @@
     <div class="carousel-inner">
 
       <!-- SLIDE 1 -->
-      <div class="carousel-item active hero-slide" style="background: url('assets/images/banner.jpeg') center/cover no-repeat fixed;">
+      <div class="carousel-item active hero-slide" style="background: url('assets/images/banner.jpeg') center/cover no-repeat;">
         <div class="container">
           <h1>Keenan Institute </h1>
           <p>“Those Who Don't Know Can Know From Learning”</p>
@@ -72,7 +72,7 @@
       </div>
 
       <!-- SLIDE 2 -->
-      <div class="carousel-item hero-slide" style="background: url('assets/images/banner2.jpeg') center/cover no-repeat fixed;">
+      <div class="carousel-item hero-slide" style="background: url('assets/images/banner2.jpeg') center/cover no-repeat;">
         <div class="container">
           <h1>Quality Education</h1>
           <p>Academic & Vocational Excellence</p>
@@ -81,7 +81,7 @@
       </div>
 
       <!-- SLIDE 3 -->
-      <div class="carousel-item hero-slide" style="background: url('assets/images/Banner3.jpeg') center/cover no-repeat fixed;">
+      <div class="carousel-item hero-slide" style="background: url('assets/images/Banner3.jpeg') center/cover no-repeat;">
         <div class="container">
           <h1>Building Future Leaders</h1>
           <p>Merit-Based & Tuition-Free Opportunities</p>
