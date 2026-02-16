@@ -277,7 +277,7 @@
           <div class="why-icon">🌱</div>
           <h5>Holistic Student Development</h5>
           <p>
-            We focus on character, discipline, leadership, and moral values
+            We focus on characters, discipline, leadership, and moral values
             alongside academic achievement.
           </p>
         </div>
