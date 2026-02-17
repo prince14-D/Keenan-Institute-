@@ -427,9 +427,18 @@ body {
 }
 
 .carousel-control-prev:hover,
+.carousel-control-next:hover {
     background-color: var(--keenan-red);
     opacity: 1;
     transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-control-prev { left: 30px; }
+.carousel-control-next { right: 30px; }
+
+@media (max-width: 480px) {
+    .carousel-control-prev { left: 5%; }
+    .carousel-control-next { right: 5%; }
 }
 
 .carousel-control-prev-icon,
