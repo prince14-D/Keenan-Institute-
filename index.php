@@ -63,7 +63,8 @@
     <div class="carousel-inner">
 
       <!-- SLIDE 1 -->
-      <div class="carousel-item active hero-slide" style="background: url('assets/images/banner.jpeg') center/cover no-repeat;">
+      <div class="carousel-item active hero-slide">
+        <img src="assets/images/banner.jpeg" class="d-block w-100 carousel-img" alt="Keenan Institute campus" loading="lazy">
         <div class="container">
           <h1>Keenan Institute </h1>
           <p>“Those Who Don't Know Can Know From Learning”</p>
@@ -72,7 +73,8 @@
       </div>
 
       <!-- SLIDE 2 -->
-      <div class="carousel-item hero-slide" style="background: url('assets/images/banner2.jpeg') center/cover no-repeat;">
+      <div class="carousel-item hero-slide">
+        <img src="assets/images/banner2.jpeg" class="d-block w-100 carousel-img" alt="Students in classroom" loading="lazy">
         <div class="container">
           <h1>Quality Education</h1>
           <p>Academic & Vocational Excellence</p>
@@ -81,7 +83,8 @@
       </div>
 
       <!-- SLIDE 3 -->
-      <div class="carousel-item hero-slide" style="background: url('assets/images/Banner3.jpeg') center/cover no-repeat;">
+      <div class="carousel-item hero-slide">
+        <img src="assets/images/Banner3.jpeg" class="d-block w-100 carousel-img" alt="Graduates throwing caps" loading="lazy">
         <div class="container">
           <h1>Building Future Leaders</h1>
           <p>Merit-Based & Tuition-Free Opportunities</p>
