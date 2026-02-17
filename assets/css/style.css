@@ -88,6 +88,9 @@ body {
     position: relative;
     overflow: hidden;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    /* allow the carousel to scale down on very short viewports */
+    height: auto;
+    aspect-ratio: 16 / 9;
 }
 
 #keenanHeroCarousel {
@@ -311,31 +314,73 @@ body {
 }
 
 @media (max-width: 480px) {
+    /* make the carousel a bit shorter on very small phones */
     .hero-slider {
-        min-height: 40vh;
+        min-height: 35vh;
     }
 
     #keenanHeroCarousel,
     .carousel-inner,
     .hero-slide {
-        min-height: 40vh;
+        min-height: 35vh;
     }
 
     .hero-slide .container {
         padding: 0;
+        text-align: center; /* center captions on tiny devices */
     }
 
     .hero-slide h1 {
-        font-size: clamp(1.3rem, 7vw, 1.8rem);
+        font-size: clamp(1.3rem, 8vw, 1.8rem);
+        line-height: 1.1;
     }
 
     .hero-slide p {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
+        line-height: 1.3;
     }
 
     .hero-slide .btn-keenan {
         padding: 8px 16px;
         font-size: 0.85rem;
+        width: 100%;
+        max-width: 200px;
+    }
+
+    /* make controls and indicators easier to tap */
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 36px;
+        height: 36px;
+    }
+
+    .carousel-indicators {
+        bottom: 8px !important;
+        gap: 6px;
+    }
+
+    .carousel-indicators [data-bs-target] {
+        width: 8px;
+        height: 8px;
+    }
+
+    .carousel-indicators [data-bs-target].active {
+        width: 16px;
+    }
+}
+
+/* extra adjustments for portrait‑oriented tablets and small phones */
+@media (max-width: 768px) and (orientation: portrait) {
+    .hero-slide .container {
+        text-align: center; /* keep text centered when the screen is narrow */
+    }
+
+    .hero-slide h1 {
+        font-size: clamp(1.6rem, 6vw, 2.2rem);
+    }
+
+    .hero-slide p {
+        font-size: clamp(1rem, 4vw, 1.2rem);
     }
 }
 
