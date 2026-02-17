@@ -352,6 +352,19 @@ body {
     .hero-slider {
         aspect-ratio: 16/9;
         height: auto;
+        /* make the slider more prominent on mobile/tablet */
+        min-height: 60vh;
+    }
+
+    /* hide side arrows on mobile to avoid overlap and accidental taps */
+    .carousel-control-prev,
+    .carousel-control-next {
+        display: none !important;
+    }
+
+    /* nudge indicators a bit higher on mobile */
+    .carousel-indicators {
+        bottom: 12px !important;
     }
 }
 
