@@ -208,7 +208,7 @@
         </p>
 
         <h6 class="mt-4 fw-bold text-keenan-red">
-          Rev. Fr. Prince T. Wreh, Sr.
+          Mr.Prince T. Wreh, II.
         </h6>
         <small class="text-muted">Founder / Principal</small>
       </div>
