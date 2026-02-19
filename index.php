@@ -139,10 +139,10 @@
       </div>
 
       <div class="col-md-4 text-center">
-        <a href="#" class="btn btn-keenan btn-lg mb-3 w-100">
+        <a href="admissions.php" class="btn btn-keenan btn-lg mb-3 w-100">
           Apply for Admission
         </a>
-        <a href="#" class="btn btn-outline-light btn-lg w-100">
+        <a href="contact.php" class="btn btn-outline-light btn-lg w-100">
           Contact the School
         </a>
       </div>
