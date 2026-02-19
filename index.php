@@ -161,7 +161,7 @@
             <div class="col-md-6">
                 <h2 class="section-title">About Keenan Institute</h2>
                 <p>
-                    Founded on <strong>October 19, 1998</strong>, Keenan Institute was conceived
+                    Founded on <strong>November 19, 1998</strong>, Keenan Institute was conceived
                     during the Liberian civil war to provide quality education for Liberian children.
                 </p>
                 <p>
