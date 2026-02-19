@@ -60,65 +60,69 @@
     </div>
 </nav>
 
-<!-- HERO SLIDER -->
-<section class="hero-slider">
-  <div id="keenanHeroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
-    <!-- Indicators -->
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#keenanHeroCarousel" data-bs-slide-to="0" class="active"></button>
-      <button type="button" data-bs-target="#keenanHeroCarousel" data-bs-slide-to="1"></button>
-      <button type="button" data-bs-target="#keenanHeroCarousel" data-bs-slide-to="2"></button>
-    </div>
-
-    <!-- Slides -->
-    <div class="carousel-inner">
-
+<!-- MODERN HERO SLIDER -->
+<section class="modern-slider-section">
+  <div class="modern-slider">
+    <!-- Slides Container -->
+    <div class="slider-wrapper">
       <!-- SLIDE 1 -->
-      <div class="carousel-item active hero-slide">
-        <img src="assets/images/banner.jpeg" class="d-block w-100 carousel-img" alt="Keenan Institute campus" loading="lazy">
-        <div class="container">
-          <h1>Keenan Institute </h1>
-          <p>“Those Who Don't Know Can Know From Learning”</p>
-          <a href="#" class="btn btn-keenan mt-4">Explore Our School</a>
+      <div class="slider-slide active" style="background-image: url('assets/images/banner.jpeg')">
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <div class="slide-text">
+            <h1 class="slide-title">Keenan Institute</h1>
+            <p class="slide-subtitle">"Those Who Don't Know Can Know From Learning"</p>
+            <a href="index.php" class="btn btn-keenan btn-lg mt-4">Explore Our School</a>
+          </div>
         </div>
       </div>
 
       <!-- SLIDE 2 -->
-      <div class="carousel-item hero-slide">
-        <img src="assets/images/banner2.jpeg" class="d-block w-100 carousel-img" alt="Students in classroom" loading="lazy">
-        <div class="container">
-          <h1>Quality Education</h1>
-          <p>Academic & Vocational Excellence</p>
-          <a href="#" class="btn btn-keenan mt-4">Our Programs</a>
+      <div class="slider-slide" style="background-image: url('assets/images/banner2.jpeg')">
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <div class="slide-text">
+            <h1 class="slide-title">Quality Education</h1>
+            <p class="slide-subtitle">Academic & Vocational Excellence</p>
+            <a href="academics.php" class="btn btn-keenan btn-lg mt-4">Our Programs</a>
+          </div>
         </div>
       </div>
 
       <!-- SLIDE 3 -->
-      <div class="carousel-item hero-slide">
-        <img src="assets/images/Banner3.jpeg" class="d-block w-100 carousel-img" alt="Graduates throwing caps" loading="lazy">
-        <div class="container">
-          <h1>Building Future Leaders</h1>
-          <p>Merit-Based & Tuition-Free Opportunities</p>
-          <a href="#" class="btn btn-keenan mt-4">Admissions</a>
+      <div class="slider-slide" style="background-image: url('assets/images/Banner3.jpeg')">
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <div class="slide-text">
+            <h1 class="slide-title">Building Future Leaders</h1>
+            <p class="slide-subtitle">Merit-Based & Tuition-Free Opportunities</p>
+            <a href="admissions.php" class="btn btn-keenan btn-lg mt-4">Apply Now</a>
+          </div>
         </div>
       </div>
-
     </div>
 
-    <!-- Controls -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#keenanHeroCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
+    <!-- Navigation Arrows -->
+    <button class="slider-nav slider-prev" aria-label="Previous slide">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+    </button>
+    <button class="slider-nav slider-next" aria-label="Next slide">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
     </button>
 
-    <button class="carousel-control-next" type="button" data-bs-target="#keenanHeroCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </button>
-
+    <!-- Dot Indicators -->
+    <div class="slider-dots">
+      <button class="dot active" data-slide="0" aria-label="Slide 1"></button>
+      <button class="dot" data-slide="1" aria-label="Slide 2"></button>
+      <button class="dot" data-slide="2" aria-label="Slide 3"></button>
+    </div>
   </div>
 </section>
-
-<!-- ADMISSIONS CALL TO ACTION -->
 <section class="admissions-cta py-5">
   <div class="container">
     <div class="row align-items-center text-center text-md-start">
@@ -493,6 +497,123 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Modern Slider Script -->
+<script>
+class ModernSlider {
+    constructor() {
+        this.slides = document.querySelectorAll('.slider-slide');
+        this.dots = document.querySelectorAll('.dot');
+        this.prevBtn = document.querySelector('.slider-prev');
+        this.nextBtn = document.querySelector('.slider-next');
+        this.currentSlide = 0;
+        this.autoPlayTimeout = null;
+        this.autoPlayDelay = 6000; // 6 seconds
+        this.touchStartX = 0;
+        this.touchEndX = 0;
+
+        this.init();
+    }
+
+    init() {
+        this.attachEventListeners();
+        this.startAutoPlay();
+    }
+
+    attachEventListeners() {
+        // Navigation buttons
+        this.prevBtn.addEventListener('click', () => this.previousSlide());
+        this.nextBtn.addEventListener('click', () => this.nextSlide());
+
+        // Dot indicators
+        this.dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => this.goToSlide(index));
+        });
+
+        // Touch/swipe support
+        const sliderWrapper = document.querySelector('.slider-wrapper');
+        sliderWrapper.addEventListener('touchstart', (e) => this.handleTouchStart(e), false);
+        sliderWrapper.addEventListener('touchend', (e) => this.handleTouchEnd(e), false);
+
+        // Pause auto-play on hover
+        document.querySelector('.modern-slider').addEventListener('mouseenter', () => this.stopAutoPlay());
+        document.querySelector('.modern-slider').addEventListener('mouseleave', () => this.startAutoPlay());
+
+        // Pause auto-play on touch
+        sliderWrapper.addEventListener('touchstart', () => this.stopAutoPlay());
+    }
+
+    showSlide(index) {
+        // Remove active class from all slides and dots
+        this.slides.forEach(slide => slide.classList.remove('active'));
+        this.dots.forEach(dot => dot.classList.remove('active'));
+
+        // Add active class to current slide and dot
+        this.slides[index].classList.add('active');
+        this.dots[index].classList.add('active');
+    }
+
+    nextSlide() {
+        this.currentSlide = (this.currentSlide + 1) % this.slides.length;
+        this.showSlide(this.currentSlide);
+        this.resetAutoPlay();
+    }
+
+    previousSlide() {
+        this.currentSlide = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
+        this.showSlide(this.currentSlide);
+        this.resetAutoPlay();
+    }
+
+    goToSlide(index) {
+        this.currentSlide = index;
+        this.showSlide(this.currentSlide);
+        this.resetAutoPlay();
+    }
+
+    startAutoPlay() {
+        this.autoPlayTimeout = setInterval(() => this.nextSlide(), this.autoPlayDelay);
+    }
+
+    stopAutoPlay() {
+        clearInterval(this.autoPlayTimeout);
+    }
+
+    resetAutoPlay() {
+        this.stopAutoPlay();
+        this.startAutoPlay();
+    }
+
+    handleTouchStart(e) {
+        this.touchStartX = e.changedTouches[0].screenX;
+    }
+
+    handleTouchEnd(e) {
+        this.touchEndX = e.changedTouches[0].screenX;
+        this.handleSwipe();
+    }
+
+    handleSwipe() {
+        const swipeThreshold = 50;
+        const diff = this.touchStartX - this.touchEndX;
+
+        if (Math.abs(diff) > swipeThreshold) {
+            if (diff > 0) {
+                // Swiped left - show next slide
+                this.nextSlide();
+            } else {
+                // Swiped right - show previous slide
+                this.previousSlide();
+            }
+        }
+    }
+}
+
+// Initialize slider when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    new ModernSlider();
+});
+</script>
 
 <!-- Service Worker Registration -->
 <script>

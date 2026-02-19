@@ -82,65 +82,90 @@ body {
     background-color: var(--keenan-blue);
     color: var(--keenan-white);
 }
-/* HERO SLIDER */
-.hero-slider {
-    /* keep the full‑viewport appearance on large screens */
+
+/* ===== MODERN HERO SLIDER ===== */
+.modern-slider-section {
+    width: 100%;
     height: 85vh;
     position: relative;
     overflow: hidden;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
+.modern-slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
 
-#keenanHeroCarousel {
+/* Slider Wrapper */
+.slider-wrapper {
+    position: relative;
+    width: 100%;
     height: 100%;
 }
 
-.carousel-inner {
+/* Individual Slides */
+.slider-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 0.8s cubic-bezier(0.4, 0.0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* SLIDE ANIMATION */
-.carousel-item {
-    transition: opacity 0.8s ease-in-out !important;
+.slider-slide.active {
+    opacity: 1;
+    z-index: 10;
 }
 
-.carousel-item.active {
-    animation: slideInFade 1s ease-in-out;
+/* Slide Overlay */
+.slide-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(193, 18, 31, 0.4),
+        rgba(0, 48, 73, 0.85)
+    );
+    z-index: 1;
 }
 
-@keyframes slideInFade {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-.hero-slide {
+/* Slide Content */
+.slide-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
     height: 100%;
-    display: flex !important;
+    display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: var(--keenan-white);
-    position: relative;
-    background-size: cover !important;
-    background-position: center !important;
-    background-attachment: scroll !important;
 }
 
-.hero-slide .container {
-    z-index: 2;
-    position: relative;
-    animation: slideUp 0.8s ease-out;
+.slide-text {
+    max-width: 700px;
+    padding: 40px 20px;
+    animation: slideInUp 0.8s ease-out 0.2s both;
 }
 
-@keyframes slideUp {
+@keyframes slideInUp {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(40px);
     }
     to {
         opacity: 1;
@@ -148,59 +173,179 @@ body {
     }
 }
 
-.hero-slide::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        135deg,
-        rgba(193, 18, 31, 0.4),
-        rgba(0, 48, 73, 0.85)
-    );
-    z-index: 1;
-    transition: background 0.6s ease;
-}
-
-.hero-slide:hover::before {
-    background: linear-gradient(
-        135deg,
-        rgba(193, 18, 31, 0.5),
-        rgba(0, 48, 73, 0.9)
-    );
-}
-
-/* SLIDE BACKGROUNDS - Now defined inline in HTML */
-
-
-/* TEXT STYLING */
-.hero-slide h1 {
-    font-size: 3.5rem;
+.slide-title {
+    font-size: clamp(2.5rem, 8vw, 4rem);
     font-weight: 900;
     margin-bottom: 1rem;
     letter-spacing: 1px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-    animation: textScale 0.8s ease-out;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+    animation: titlePop 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-@keyframes textScale {
-    from {
+@keyframes titlePop {
+    0% {
         opacity: 0;
-        transform: scale(0.9);
+        transform: scale(0.8) translateY(20px);
     }
-    to {
+    100% {
         opacity: 1;
-        transform: scale(1);
+        transform: scale(1) translateY(0);
     }
 }
 
-.hero-slide p {
-    font-size: 1.4rem;
+.slide-subtitle {
+    font-size: clamp(1rem, 3vw, 1.4rem);
     color: var(--keenan-gold);
     margin-bottom: 1.5rem;
     font-weight: 500;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    animation: slideInUp 0.8s ease-out 0.3s both;
+}
+
+/* Navigation Arrows */
+.slider-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.slider-nav:hover {
+    background: rgba(193, 18, 31, 0.8);
+    border-color: var(--keenan-gold);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.slider-nav:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(193, 18, 31, 0.5);
+}
+
+.slider-prev {
+    left: 30px;
+}
+
+.slider-next {
+    right: 30px;
+}
+
+/* Dot Indicators */
+.slider-dots {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    display: flex;
+    gap: 12px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.dot:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    transform: scale(1.2);
+}
+
+.dot.active {
+    background-color: var(--keenan-gold);
+    width: 28px;
+    border-radius: 6px;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    .modern-slider-section {
+        height: 70vh;
+    }
+
+    .slide-text {
+        padding: 30px 15px;
+    }
+
+    .slide-title {
+        font-size: clamp(1.8rem, 6vw, 2.5rem);
+    }
+
+    .slide-subtitle {
+        font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    }
+
+    .slider-nav {
+        width: 40px;
+        height: 40px;
+    }
+
+    .slider-prev {
+        left: 15px;
+    }
+
+    .slider-next {
+        right: 15px;
+    }
+
+    .slider-dots {
+        bottom: 20px;
+        gap: 8px;
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
+
+    .dot.active {
+        width: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modern-slider-section {
+        height: 60vh;
+    }
+
+    .slide-text {
+        padding: 20px 10px;
+    }
+
+    .btn-lg {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.95rem;
+    }
+
+    .slider-nav {
+        display: none;
+    }
+
+    .slider-dots {
+        bottom: 15px;
+    }
+}
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
     letter-spacing: 0.5px;
 }
+
 
 .hero-slide .btn-keenan {
     padding: 14px 40px;
@@ -980,3 +1125,4 @@ body {
         margin-bottom: 20px;
     }
 }
+
