@@ -61,7 +61,7 @@
             <div class="col-lg-10 mx-auto">
                 <h2 class="section-title mb-3">Our History</h2>
                 <p>
-                    Keenan Institute was founded on <strong>October 19, 1998</strong>.
+                    Keenan Institute was founded on <strong>November 19, 1998</strong>.
                     The vision for the school was conceived during the Liberian civil war
                     while its founders were in exile in Ivory Coast, with the goal of
                     providing access to education for Liberian children affected by conflict.
@@ -162,9 +162,9 @@
         </p>
 
         <h6 class="mt-4 fw-bold text-keenan-red">
-          Rev. Fr. Prince T. Wreh, Sr.
+          Mr. Prince T. Wreh, Sr.
         </h6>
-        <small class="text-muted">Founder / Principal</small>
+        <small class="text-muted">Principal</small>
       </div>
 
     </div>

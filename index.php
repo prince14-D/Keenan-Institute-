@@ -224,7 +224,7 @@
         </p>
 
         <h6 class="mt-4 fw-bold text-keenan-red">
-          Mr.Prince T. Wreh, II.
+          Mr. Prince T. Wreh, II.
         </h6>
         <small class="text-muted">Principal</small>
       </div>
