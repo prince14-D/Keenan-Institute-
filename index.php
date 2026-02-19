@@ -13,6 +13,18 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="assets/images/logo.jpeg">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#8B0000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Keenan Institute">
+    <link rel="apple-touch-icon" href="assets/images/logo.jpeg">
+    <meta name="msapplication-TileColor" content="#8B0000">
+    <meta name="msapplication-TileImage" content="assets/images/logo.jpeg">
 </head>
 
 <body>
@@ -481,5 +493,32 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Service Worker Registration -->
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('service-worker.js')
+      .then(registration => {
+        console.log('Service Worker registered successfully:', registration);
+      })
+      .catch(error => {
+        console.log('Service Worker registration failed:', error);
+      });
+  });
+}
+
+// Handle install prompt for "Add to Home Screen"
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt', event => {
+  event.preventDefault();
+  deferredPrompt = event;
+  // You can show an "Install App" button here if desired
+});
+
+window.addEventListener('appinstalled', () => {
+  console.log('Keenan Institute app was installed');
+});
+</script>
 </body>
 </html>
