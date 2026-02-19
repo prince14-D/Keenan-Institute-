@@ -400,8 +400,8 @@
       <!-- Partner 3 -->
       <div class="col-md-3 col-6 text-center">
         <div class="partner-logo">
-          <img src="assets/images/Educationpartner.jpg" alt="Educational Partners">
-          <p>Educational Partners</p>
+          <img src="assets/images/MOE.png" alt="Educational Partners">
+          <p>Ministry Of Education</p>
         </div>
       </div>
 
@@ -473,7 +473,7 @@
           Bong County, Liberia
         </p>
         <p class="footer-text">
-          📞 +231 880 427 277<br>
+          📞 +231 887-153-177<br>
           ✉️ info@keenaninstitute.com
         </p>
 
