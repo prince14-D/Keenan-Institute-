@@ -11,6 +11,9 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="assets/images/logo.jpeg">
 </head>
@@ -281,5 +284,24 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- FLOATING ACTION BUTTONS -->
+<div class="floating-buttons">
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/231887153177?text=Hello%20Keenan%20Institute" target="_blank" class="floating-btn whatsapp-btn" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <!-- Call Button -->
+    <a href="tel:+231887153177" class="floating-btn call-btn" title="Call us">
+        <i class="fas fa-phone"></i>
+    </a>
+    
+    <!-- Email Button -->
+    <a href="mailto:info@keenaninstitute.com" class="floating-btn email-btn" title="Send us an email">
+        <i class="fas fa-envelope"></i>
+    </a>
+</div>
+
 </body>
 </html>

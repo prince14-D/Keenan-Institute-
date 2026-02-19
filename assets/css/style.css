@@ -1119,8 +1119,88 @@ body {
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
-/* MOBILE */
+/* FLOATING ACTION BUTTONS */
+.floating-buttons {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 999;
+}
+
+.floating-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.floating-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.floating-btn:active {
+    transform: scale(0.95);
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+    background-color: #25d366;
+    color: white;
+}
+
+.whatsapp-btn:hover {
+    background-color: #20ba5c;
+    color: white;
+}
+
+/* Call Button */
+.call-btn {
+    background-color: var(--keenan-red);
+    color: white;
+}
+
+.call-btn:hover {
+    background-color: #a71018;
+    color: white;
+}
+
+/* Email Button */
+.email-btn {
+    background-color: var(--keenan-blue);
+    color: white;
+}
+
+.email-btn:hover {
+    background-color: #002137;
+    color: white;
+}
+
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
+    .floating-buttons {
+        bottom: 20px;
+        right: 20px;
+        gap: 12px;
+    }
+
+    .floating-btn {
+        width: 55px;
+        height: 55px;
+        font-size: 20px;
+    }
+
     .contact-info-card {
         margin-bottom: 20px;
     }
